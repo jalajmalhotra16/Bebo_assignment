@@ -1,0 +1,17 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: pod-cleanup-test-cronjob
+  namespace: default
+spec:
+  schedule: "*/5 * * * *"  # This sets the schedule to run every 5 minutes
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          serviceAccountName: pod-cleanup-sa
+          containers:
+            - name: cleanup
+              image: pod-cleanup:latest
+              imagePullPolicy: Never
+          restartPolicy: OnFailure

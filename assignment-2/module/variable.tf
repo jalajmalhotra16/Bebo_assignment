@@ -6,13 +6,13 @@ variable "vpc_cidr" {
 variable "private_subnets" {
   description = "Number of private subnets to create"
   type        = number
-  default     = 1
+  default     = 3
 }
 
 variable "public_subnets" {
   description = "Number of public subnets to create"
   type        = number
-  default     = 1
+  default     = 3
 }
 
 variable "azs" {
