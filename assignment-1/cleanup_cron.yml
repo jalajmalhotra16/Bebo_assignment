@@ -15,3 +15,4 @@ spec:
               image: pod-cleanup:latest
               imagePullPolicy: Never
           restartPolicy: OnFailure
+          
