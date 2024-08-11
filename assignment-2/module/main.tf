@@ -22,7 +22,7 @@ resource "aws_subnet" "public_subnets" {
 resource "aws_subnet" "private_subnets" {
   count             = var.private_subnets
   vpc_id            = aws_vpc.vpc_assignment.id
-  cidr_block        = cidrsubnet(var.vpc_cidr, 4, count.index + 2)
+  cidr_block        = cidrsubnet(var.vpc_cidr, 4, count.index + var.public_subnets)
   availability_zone = element(var.azs, count.index)
   tags = {
     Name = "Private Subnet"
@@ -48,31 +48,30 @@ resource "aws_route_table_association" "public_rt_assoc" {
 
 
 resource "aws_eip" "nat" {
+  count  = var.public_subnets
   domain = "vpc"
-
 }
 
-resource "aws_nat_gateway" "nat_assignment" {
-  allocation_id = aws_eip.nat.id
-  subnet_id     = element(aws_subnet.public_subnets[*].id, 0)
 
+resource "aws_nat_gateway" "nat_assignment" {
+  count         = var.public_subnets
+  allocation_id = element(aws_eip.nat[*].id, count.index)
+  subnet_id     = element(aws_subnet.public_subnets[*].id, count.index)
 }
 
 resource "aws_route_table" "private_rt" {
+  count  = var.private_subnets
   vpc_id = aws_vpc.vpc_assignment.id
   route {
     cidr_block     = "0.0.0.0/0"
-    nat_gateway_id = aws_nat_gateway.nat_assignment.id
+    nat_gateway_id = element(aws_nat_gateway.nat_assignment[*].id, count.index)
   }
-
 }
 
 resource "aws_route_table_association" "private_rt_assoc" {
   count          = var.private_subnets
   subnet_id      = element(aws_subnet.private_subnets[*].id, count.index)
-  route_table_id = aws_route_table.private_rt.id
-
-
+  route_table_id = element(aws_route_table.private_rt[*].id, count.index)
 }
 
 resource "aws_ec2_transit_gateway" "transit_assignment" {
