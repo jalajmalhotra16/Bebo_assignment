@@ -1,9 +1,7 @@
 module "vpc" {
   source          = "./module"
-  vpc_cidr        = "10.0.0.0/16"
-  private_subnets = 3
-  public_subnets  = 3
-  azs             = ["us-east-1a", "us-east-1b", "us-east-1c"]
-
-
+  vpc_cidr        = var.vpc_cidr
+  private_subnets = var.private_subnets
+  public_subnets  = var.public_subnets
+  azs             = var.azs
 }
