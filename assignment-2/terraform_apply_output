@@ -1,7 +1,6 @@
 PS C:\Users\Jalaj Malhotra\Documents\time to grow\bebo\Bebo_assignment\assignment-2> terraform apply --auto-approve
 
-Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the
-following symbols:
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
   + create
 
 Terraform will perform the following actions:
@@ -408,88 +407,123 @@ Terraform will perform the following actions:
     }
 
 Plan: 24 to add, 0 to change, 0 to destroy.
-module.vpc.aws_eip.nat[1]: Creating...
+
+Changes to Outputs:
+  + nat_gateway_id     = [
+      + (known after apply),
+      + (known after apply),
+      + (known after apply),
+    ]
+  + private_subnet_ids = [
+      + (known after apply),
+      + (known after apply),
+      + (known after apply),
+    ]
+  + public_subnet_ids  = [
+      + (known after apply),
+      + (known after apply),
+      + (known after apply),
+    ]
+  + vpc_id             = (known after apply)
+module.vpc.aws_vpc.vpc_assignment: Creating...
 module.vpc.aws_eip.nat[0]: Creating...
 module.vpc.aws_eip.nat[2]: Creating...
-module.vpc.aws_vpc.vpc_assignment: Creating...
-module.vpc.aws_eip.nat[1]: Creation complete after 3s [id=eipalloc-049ef7f75e767b6fd]
-module.vpc.aws_eip.nat[0]: Creation complete after 3s [id=eipalloc-06ec21b0ccc7e7706]
-module.vpc.aws_eip.nat[2]: Creation complete after 3s [id=eipalloc-000eee9490ba41dba]
-module.vpc.aws_vpc.vpc_assignment: Creation complete after 5s [id=vpc-0370bf0325b3d364d]
+module.vpc.aws_eip.nat[1]: Creating...
+module.vpc.aws_eip.nat[2]: Creation complete after 2s [id=eipalloc-0a85d0013ef765cd5]
+module.vpc.aws_eip.nat[0]: Creation complete after 2s [id=eipalloc-07bb16c1d0303c951]
+module.vpc.aws_eip.nat[1]: Creation complete after 2s [id=eipalloc-0c9e49e7a2c4fd1fb]
+module.vpc.aws_vpc.vpc_assignment: Creation complete after 4s [id=vpc-00f32b84645da4c41]
 module.vpc.aws_internet_gateway.internet_assignment: Creating...
-module.vpc.aws_subnet.public_subnets[0]: Creating...
 module.vpc.aws_subnet.private_subnets[1]: Creating...
-module.vpc.aws_subnet.public_subnets[1]: Creating...
 module.vpc.aws_subnet.private_subnets[2]: Creating...
 module.vpc.aws_subnet.public_subnets[2]: Creating...
 module.vpc.aws_subnet.private_subnets[0]: Creating...
-module.vpc.aws_subnet.private_subnets[2]: Creation complete after 1s [id=subnet-00d1a389b39d67a89]
-module.vpc.aws_subnet.private_subnets[1]: Creation complete after 1s [id=subnet-017be521b219d8631]
-module.vpc.aws_subnet.private_subnets[0]: Creation complete after 2s [id=subnet-0e9019c3c774218e9]
-module.vpc.aws_internet_gateway.internet_assignment: Creation complete after 2s [id=igw-0d167c418c27a223a]
+module.vpc.aws_subnet.public_subnets[1]: Creating...
+module.vpc.aws_subnet.public_subnets[0]: Creating...
+module.vpc.aws_internet_gateway.internet_assignment: Creation complete after 1s [id=igw-08333217b3d830088]
+module.vpc.aws_subnet.private_subnets[0]: Creation complete after 1s [id=subnet-03e6fd6d97376e6d3]
 module.vpc.aws_route_table.public_rt: Creating...
-module.vpc.aws_route_table.public_rt: Creation complete after 2s [id=rtb-08d6c4b3781537cf9]
-module.vpc.aws_subnet.public_subnets[0]: Still creating... [10s elapsed]
+module.vpc.aws_subnet.private_subnets[2]: Creation complete after 2s [id=subnet-09b040ceea731fd9c]
+module.vpc.aws_subnet.private_subnets[1]: Creation complete after 2s [id=subnet-05f4a21249b317499]
+module.vpc.aws_route_table.public_rt: Creation complete after 3s [id=rtb-0bd35a384f4f845ed]
 module.vpc.aws_subnet.public_subnets[2]: Still creating... [10s elapsed]
 module.vpc.aws_subnet.public_subnets[1]: Still creating... [10s elapsed]
-module.vpc.aws_subnet.public_subnets[2]: Creation complete after 12s [id=subnet-059668912a7270cc8]
-module.vpc.aws_subnet.public_subnets[0]: Creation complete after 12s [id=subnet-0e3a3116c9e6fe643]
-module.vpc.aws_subnet.public_subnets[1]: Creation complete after 12s [id=subnet-01b22e73843f8f8db]
-module.vpc.aws_route_table_association.public_rt_assoc[1]: Creating...
+module.vpc.aws_subnet.public_subnets[0]: Still creating... [10s elapsed]
+module.vpc.aws_subnet.public_subnets[1]: Creation complete after 12s [id=subnet-0ec2094c4048360b7]
+module.vpc.aws_subnet.public_subnets[2]: Creation complete after 12s [id=subnet-0c2c6b5b541302e22]
+module.vpc.aws_subnet.public_subnets[0]: Creation complete after 12s [id=subnet-0bd710b6f2001cd10]
 module.vpc.aws_route_table_association.public_rt_assoc[0]: Creating...
-module.vpc.aws_route_table_association.public_rt_assoc[2]: Creating...
-module.vpc.aws_nat_gateway.nat_assignment[2]: Creating...
-module.vpc.aws_nat_gateway.nat_assignment[0]: Creating...
+module.vpc.aws_route_table_association.public_rt_assoc[1]: Creating...
 module.vpc.aws_nat_gateway.nat_assignment[1]: Creating...
-module.vpc.aws_route_table_association.public_rt_assoc[0]: Creation complete after 1s [id=rtbassoc-0662930e506544c29]
-module.vpc.aws_route_table_association.public_rt_assoc[2]: Creation complete after 1s [id=rtbassoc-027f5fa287a31a0e5]
-module.vpc.aws_route_table_association.public_rt_assoc[1]: Creation complete after 1s [id=rtbassoc-04a8dfa40eb53611b]
+module.vpc.aws_nat_gateway.nat_assignment[2]: Creating...
+module.vpc.aws_route_table_association.public_rt_assoc[2]: Creating...
+module.vpc.aws_nat_gateway.nat_assignment[0]: Creating...
+module.vpc.aws_route_table_association.public_rt_assoc[0]: Creation complete after 2s [id=rtbassoc-07dabf32002de4666]
+module.vpc.aws_route_table_association.public_rt_assoc[2]: Creation complete after 2s [id=rtbassoc-0386449ee83662f48]
+module.vpc.aws_route_table_association.public_rt_assoc[1]: Creation complete after 2s [id=rtbassoc-09e309359486d7a4e]
 module.vpc.aws_nat_gateway.nat_assignment[2]: Still creating... [10s elapsed]
-module.vpc.aws_nat_gateway.nat_assignment[0]: Still creating... [10s elapsed]
 module.vpc.aws_nat_gateway.nat_assignment[1]: Still creating... [10s elapsed]
-module.vpc.aws_nat_gateway.nat_assignment[0]: Still creating... [20s elapsed]
+module.vpc.aws_nat_gateway.nat_assignment[0]: Still creating... [10s elapsed]
 module.vpc.aws_nat_gateway.nat_assignment[2]: Still creating... [20s elapsed]
 module.vpc.aws_nat_gateway.nat_assignment[1]: Still creating... [20s elapsed]
+module.vpc.aws_nat_gateway.nat_assignment[0]: Still creating... [20s elapsed]
 module.vpc.aws_nat_gateway.nat_assignment[2]: Still creating... [30s elapsed]
-module.vpc.aws_nat_gateway.nat_assignment[0]: Still creating... [30s elapsed]
 module.vpc.aws_nat_gateway.nat_assignment[1]: Still creating... [30s elapsed]
-module.vpc.aws_nat_gateway.nat_assignment[0]: Still creating... [40s elapsed]
-module.vpc.aws_nat_gateway.nat_assignment[2]: Still creating... [40s elapsed]
+module.vpc.aws_nat_gateway.nat_assignment[0]: Still creating... [30s elapsed]
 module.vpc.aws_nat_gateway.nat_assignment[1]: Still creating... [40s elapsed]
-module.vpc.aws_nat_gateway.nat_assignment[0]: Still creating... [50s elapsed]
+module.vpc.aws_nat_gateway.nat_assignment[2]: Still creating... [40s elapsed]
+module.vpc.aws_nat_gateway.nat_assignment[0]: Still creating... [40s elapsed]
 module.vpc.aws_nat_gateway.nat_assignment[2]: Still creating... [50s elapsed]
 module.vpc.aws_nat_gateway.nat_assignment[1]: Still creating... [50s elapsed]
+module.vpc.aws_nat_gateway.nat_assignment[0]: Still creating... [50s elapsed]
 module.vpc.aws_nat_gateway.nat_assignment[2]: Still creating... [1m0s elapsed]
 module.vpc.aws_nat_gateway.nat_assignment[0]: Still creating... [1m0s elapsed]
 module.vpc.aws_nat_gateway.nat_assignment[1]: Still creating... [1m0s elapsed]
-module.vpc.aws_nat_gateway.nat_assignment[0]: Still creating... [1m10s elapsed]
 module.vpc.aws_nat_gateway.nat_assignment[2]: Still creating... [1m10s elapsed]
+module.vpc.aws_nat_gateway.nat_assignment[0]: Still creating... [1m10s elapsed]
 module.vpc.aws_nat_gateway.nat_assignment[1]: Still creating... [1m10s elapsed]
 module.vpc.aws_nat_gateway.nat_assignment[2]: Still creating... [1m20s elapsed]
-module.vpc.aws_nat_gateway.nat_assignment[0]: Still creating... [1m20s elapsed]
-module.vpc.aws_nat_gateway.nat_assignment[1]: Still creating... [1m20s elapsed]
-module.vpc.aws_nat_gateway.nat_assignment[2]: Still creating... [1m30s elapsed]
-module.vpc.aws_nat_gateway.nat_assignment[0]: Still creating... [1m30s elapsed]
-module.vpc.aws_nat_gateway.nat_assignment[1]: Still creating... [1m30s elapsed]
-module.vpc.aws_nat_gateway.nat_assignment[2]: Creation complete after 1m38s [id=nat-0dc41d9a832713bdf]
-module.vpc.aws_nat_gateway.nat_assignment[0]: Still creating... [1m40s elapsed]
-module.vpc.aws_nat_gateway.nat_assignment[1]: Still creating... [1m40s elapsed]
-module.vpc.aws_nat_gateway.nat_assignment[0]: Creation complete after 1m48s [id=nat-06bb5e8773943e630]
-module.vpc.aws_nat_gateway.nat_assignment[1]: Still creating... [1m50s elapsed]
-module.vpc.aws_nat_gateway.nat_assignment[1]: Still creating... [2m0s elapsed]
-module.vpc.aws_nat_gateway.nat_assignment[1]: Still creating... [2m10s elapsed]
-module.vpc.aws_nat_gateway.nat_assignment[1]: Creation complete after 2m20s [id=nat-06af9e762a15d743f]
-module.vpc.aws_route_table.private_rt[0]: Creating...
-module.vpc.aws_route_table.private_rt[1]: Creating...
+module.vpc.aws_nat_gateway.nat_assignment[0]: Still creating... [1m21s elapsed]
+module.vpc.aws_nat_gateway.nat_assignment[1]: Still creating... [1m21s elapsed]
+module.vpc.aws_nat_gateway.nat_assignment[2]: Still creating... [1m31s elapsed]
+module.vpc.aws_nat_gateway.nat_assignment[1]: Still creating... [1m31s elapsed]
+module.vpc.aws_nat_gateway.nat_assignment[0]: Still creating... [1m31s elapsed]
+module.vpc.aws_nat_gateway.nat_assignment[1]: Creation complete after 1m39s [id=nat-0604d2be9320c81cf]
+module.vpc.aws_nat_gateway.nat_assignment[2]: Still creating... [1m41s elapsed]
+module.vpc.aws_nat_gateway.nat_assignment[0]: Still creating... [1m41s elapsed]
+module.vpc.aws_nat_gateway.nat_assignment[0]: Creation complete after 1m49s [id=nat-0c1caf8ba0d4f4635]
+module.vpc.aws_nat_gateway.nat_assignment[2]: Still creating... [1m51s elapsed]
+module.vpc.aws_nat_gateway.nat_assignment[2]: Creation complete after 2m0s [id=nat-039edd29adb5d6993]
 module.vpc.aws_route_table.private_rt[2]: Creating...
-module.vpc.aws_route_table.private_rt[1]: Creation complete after 2s [id=rtb-079894eedbb462941]
-module.vpc.aws_route_table.private_rt[2]: Creation complete after 2s [id=rtb-0f6e9fcbfee06ed65]
-module.vpc.aws_route_table.private_rt[0]: Creation complete after 3s [id=rtb-0e04645357a5b666e]
+module.vpc.aws_route_table.private_rt[1]: Creating...
+module.vpc.aws_route_table.private_rt[0]: Creating...
+module.vpc.aws_route_table.private_rt[0]: Creation complete after 2s [id=rtb-0f8e054d101d847a1]
+module.vpc.aws_route_table.private_rt[2]: Creation complete after 2s [id=rtb-028f3541c58bf1a6b]
+module.vpc.aws_route_table.private_rt[1]: Creation complete after 2s [id=rtb-06e583342bffdd27b]
+module.vpc.aws_route_table_association.private_rt_assoc[0]: Creating...
 module.vpc.aws_route_table_association.private_rt_assoc[1]: Creating...
 module.vpc.aws_route_table_association.private_rt_assoc[2]: Creating...
-module.vpc.aws_route_table_association.private_rt_assoc[0]: Creating...
-module.vpc.aws_route_table_association.private_rt_assoc[0]: Creation complete after 1s [id=rtbassoc-07a912b34c756616c]
-module.vpc.aws_route_table_association.private_rt_assoc[1]: Creation complete after 1s [id=rtbassoc-0a22789ea078743dd]
-module.vpc.aws_route_table_association.private_rt_assoc[2]: Creation complete after 1s [id=rtbassoc-050fbf4386a28462c]
+module.vpc.aws_route_table_association.private_rt_assoc[1]: Creation complete after 1s [id=rtbassoc-03576f04636679f06]
+module.vpc.aws_route_table_association.private_rt_assoc[0]: Creation complete after 1s [id=rtbassoc-09e4dd64133376e9b]
+module.vpc.aws_route_table_association.private_rt_assoc[2]: Creation complete after 1s [id=rtbassoc-000db1bec44afe28c]
 
 Apply complete! Resources: 24 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+nat_gateway_id = [
+  "nat-0c1caf8ba0d4f4635",
+  "nat-0604d2be9320c81cf",
+  "nat-039edd29adb5d6993",
+]
+private_subnet_ids = [
+  "subnet-03e6fd6d97376e6d3",
+  "subnet-05f4a21249b317499",
+  "subnet-09b040ceea731fd9c",
+]
+public_subnet_ids = [
+  "subnet-0bd710b6f2001cd10",
+  "subnet-0ec2094c4048360b7",
+  "subnet-0c2c6b5b541302e22",
+]
+vpc_id = "vpc-00f32b84645da4c41"
