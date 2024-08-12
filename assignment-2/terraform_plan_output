@@ -176,6 +176,39 @@ Terraform will perform the following actions:
       + vpc_id           = (known after apply)
     }
 
+  # module.vpc.aws_route_table.private_rt_for_db[0] will be created
+  + resource "aws_route_table" "private_rt_for_db" {
+      + arn              = (known after apply)
+      + id               = (known after apply)
+      + owner_id         = (known after apply)
+      + propagating_vgws = (known after apply)
+      + route            = (known after apply)
+      + tags_all         = (known after apply)
+      + vpc_id           = (known after apply)
+    }
+
+  # module.vpc.aws_route_table.private_rt_for_db[1] will be created
+  + resource "aws_route_table" "private_rt_for_db" {
+      + arn              = (known after apply)
+      + id               = (known after apply)
+      + owner_id         = (known after apply)
+      + propagating_vgws = (known after apply)
+      + route            = (known after apply)
+      + tags_all         = (known after apply)
+      + vpc_id           = (known after apply)
+    }
+
+  # module.vpc.aws_route_table.private_rt_for_db[2] will be created
+  + resource "aws_route_table" "private_rt_for_db" {
+      + arn              = (known after apply)
+      + id               = (known after apply)
+      + owner_id         = (known after apply)
+      + propagating_vgws = (known after apply)
+      + route            = (known after apply)
+      + tags_all         = (known after apply)
+      + vpc_id           = (known after apply)
+    }
+
   # module.vpc.aws_route_table.public_rt will be created
   + resource "aws_route_table" "public_rt" {
       + arn              = (known after apply)
@@ -209,6 +242,27 @@ Terraform will perform the following actions:
 
   # module.vpc.aws_route_table_association.private_rt_assoc[2] will be created
   + resource "aws_route_table_association" "private_rt_assoc" {
+      + id             = (known after apply)
+      + route_table_id = (known after apply)
+      + subnet_id      = (known after apply)
+    }
+
+  # module.vpc.aws_route_table_association.private_rt_assoc_for_db[0] will be created
+  + resource "aws_route_table_association" "private_rt_assoc_for_db" {
+      + id             = (known after apply)
+      + route_table_id = (known after apply)
+      + subnet_id      = (known after apply)
+    }
+
+  # module.vpc.aws_route_table_association.private_rt_assoc_for_db[1] will be created
+  + resource "aws_route_table_association" "private_rt_assoc_for_db" {
+      + id             = (known after apply)
+      + route_table_id = (known after apply)
+      + subnet_id      = (known after apply)
+    }
+
+  # module.vpc.aws_route_table_association.private_rt_assoc_for_db[2] will be created
+  + resource "aws_route_table_association" "private_rt_assoc_for_db" {
       + id             = (known after apply)
       + route_table_id = (known after apply)
       + subnet_id      = (known after apply)
@@ -310,6 +364,81 @@ Terraform will perform the following actions:
       + vpc_id                                         = (known after apply)
     }
 
+  # module.vpc.aws_subnet.private_subnets_for_db[0] will be created
+  + resource "aws_subnet" "private_subnets_for_db" {
+      + arn                                            = (known after apply)
+      + assign_ipv6_address_on_creation                = false
+      + availability_zone                              = "us-east-1a"
+      + availability_zone_id                           = (known after apply)
+      + cidr_block                                     = "10.0.96.0/20"
+      + enable_dns64                                   = false
+      + enable_resource_name_dns_a_record_on_launch    = false
+      + enable_resource_name_dns_aaaa_record_on_launch = false
+      + id                                             = (known after apply)
+      + ipv6_cidr_block_association_id                 = (known after apply)
+      + ipv6_native                                    = false
+      + map_public_ip_on_launch                        = false
+      + owner_id                                       = (known after apply)
+      + private_dns_hostname_type_on_launch            = (known after apply)
+      + tags                                           = {
+          + "Name" = "Private Subnet_for_db"
+        }
+      + tags_all                                       = {
+          + "Name" = "Private Subnet_for_db"
+        }
+      + vpc_id                                         = (known after apply)
+    }
+
+  # module.vpc.aws_subnet.private_subnets_for_db[1] will be created
+  + resource "aws_subnet" "private_subnets_for_db" {
+      + arn                                            = (known after apply)
+      + assign_ipv6_address_on_creation                = false
+      + availability_zone                              = "us-east-1b"
+      + availability_zone_id                           = (known after apply)
+      + cidr_block                                     = "10.0.112.0/20"
+      + enable_dns64                                   = false
+      + enable_resource_name_dns_a_record_on_launch    = false
+      + enable_resource_name_dns_aaaa_record_on_launch = false
+      + id                                             = (known after apply)
+      + ipv6_cidr_block_association_id                 = (known after apply)
+      + ipv6_native                                    = false
+      + map_public_ip_on_launch                        = false
+      + owner_id                                       = (known after apply)
+      + private_dns_hostname_type_on_launch            = (known after apply)
+      + tags                                           = {
+          + "Name" = "Private Subnet_for_db"
+        }
+      + tags_all                                       = {
+          + "Name" = "Private Subnet_for_db"
+        }
+      + vpc_id                                         = (known after apply)
+    }
+
+  # module.vpc.aws_subnet.private_subnets_for_db[2] will be created
+  + resource "aws_subnet" "private_subnets_for_db" {
+      + arn                                            = (known after apply)
+      + assign_ipv6_address_on_creation                = false
+      + availability_zone                              = "us-east-1c"
+      + availability_zone_id                           = (known after apply)
+      + cidr_block                                     = "10.0.128.0/20"
+      + enable_dns64                                   = false
+      + enable_resource_name_dns_a_record_on_launch    = false
+      + enable_resource_name_dns_aaaa_record_on_launch = false
+      + id                                             = (known after apply)
+      + ipv6_cidr_block_association_id                 = (known after apply)
+      + ipv6_native                                    = false
+      + map_public_ip_on_launch                        = false
+      + owner_id                                       = (known after apply)
+      + private_dns_hostname_type_on_launch            = (known after apply)
+      + tags                                           = {
+          + "Name" = "Private Subnet_for_db"
+        }
+      + tags_all                                       = {
+          + "Name" = "Private Subnet_for_db"
+        }
+      + vpc_id                                         = (known after apply)
+    }
+
   # module.vpc.aws_subnet.public_subnets[0] will be created
   + resource "aws_subnet" "public_subnets" {
       + arn                                            = (known after apply)
@@ -406,27 +535,32 @@ Terraform will perform the following actions:
       + tags_all                             = (known after apply)
     }
 
-Plan: 24 to add, 0 to change, 0 to destroy.
+Plan: 33 to add, 0 to change, 0 to destroy.
 
 Changes to Outputs:
-  + nat_gateway_id     = [
+  + nat_gateway_id            = [
       + (known after apply),
       + (known after apply),
       + (known after apply),
     ]
-  + private_subnet_ids = [
+  + private_subnet_for_db_ids = [
       + (known after apply),
       + (known after apply),
       + (known after apply),
     ]
-  + public_subnet_ids  = [
+  + private_subnet_ids        = [
       + (known after apply),
       + (known after apply),
       + (known after apply),
     ]
-  + vpc_id             = (known after apply)
+  + public_subnet_ids         = [
+      + (known after apply),
+      + (known after apply),
+      + (known after apply),
+    ]
+  + vpc_id                    = (known after apply)
 
-─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── 
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── 
 
-Note: You didn't use the -out option to save this plan, so Terraform can't guarantee to take exactly these actions if you run "terraform apply"     
-now.
+Note: You didn't use the -out option to save this plan, so Terraform can't guarantee to take exactly these actions if you run "terraform apply" now.
+PS C:\Users\Jalaj Malhotra\Documents\time to grow\bebo\Bebo_assignment\assignment-2> 
