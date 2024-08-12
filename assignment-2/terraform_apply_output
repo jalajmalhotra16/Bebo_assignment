@@ -176,6 +176,39 @@ Terraform will perform the following actions:
       + vpc_id           = (known after apply)
     }
 
+  # module.vpc.aws_route_table.private_rt_for_db[0] will be created
+  + resource "aws_route_table" "private_rt_for_db" {
+      + arn              = (known after apply)
+      + id               = (known after apply)
+      + owner_id         = (known after apply)
+      + propagating_vgws = (known after apply)
+      + route            = (known after apply)
+      + tags_all         = (known after apply)
+      + vpc_id           = (known after apply)
+    }
+
+  # module.vpc.aws_route_table.private_rt_for_db[1] will be created
+  + resource "aws_route_table" "private_rt_for_db" {
+      + arn              = (known after apply)
+      + id               = (known after apply)
+      + owner_id         = (known after apply)
+      + propagating_vgws = (known after apply)
+      + route            = (known after apply)
+      + tags_all         = (known after apply)
+      + vpc_id           = (known after apply)
+    }
+
+  # module.vpc.aws_route_table.private_rt_for_db[2] will be created
+  + resource "aws_route_table" "private_rt_for_db" {
+      + arn              = (known after apply)
+      + id               = (known after apply)
+      + owner_id         = (known after apply)
+      + propagating_vgws = (known after apply)
+      + route            = (known after apply)
+      + tags_all         = (known after apply)
+      + vpc_id           = (known after apply)
+    }
+
   # module.vpc.aws_route_table.public_rt will be created
   + resource "aws_route_table" "public_rt" {
       + arn              = (known after apply)
@@ -209,6 +242,27 @@ Terraform will perform the following actions:
 
   # module.vpc.aws_route_table_association.private_rt_assoc[2] will be created
   + resource "aws_route_table_association" "private_rt_assoc" {
+      + id             = (known after apply)
+      + route_table_id = (known after apply)
+      + subnet_id      = (known after apply)
+    }
+
+  # module.vpc.aws_route_table_association.private_rt_assoc_for_db[0] will be created
+  + resource "aws_route_table_association" "private_rt_assoc_for_db" {
+      + id             = (known after apply)
+      + route_table_id = (known after apply)
+      + subnet_id      = (known after apply)
+    }
+
+  # module.vpc.aws_route_table_association.private_rt_assoc_for_db[1] will be created
+  + resource "aws_route_table_association" "private_rt_assoc_for_db" {
+      + id             = (known after apply)
+      + route_table_id = (known after apply)
+      + subnet_id      = (known after apply)
+    }
+
+  # module.vpc.aws_route_table_association.private_rt_assoc_for_db[2] will be created
+  + resource "aws_route_table_association" "private_rt_assoc_for_db" {
       + id             = (known after apply)
       + route_table_id = (known after apply)
       + subnet_id      = (known after apply)
@@ -310,6 +364,81 @@ Terraform will perform the following actions:
       + vpc_id                                         = (known after apply)
     }
 
+  # module.vpc.aws_subnet.private_subnets_for_db[0] will be created
+  + resource "aws_subnet" "private_subnets_for_db" {
+      + arn                                            = (known after apply)
+      + assign_ipv6_address_on_creation                = false
+      + availability_zone                              = "us-east-1a"
+      + availability_zone_id                           = (known after apply)
+      + cidr_block                                     = "10.0.96.0/20"
+      + enable_dns64                                   = false
+      + enable_resource_name_dns_a_record_on_launch    = false
+      + enable_resource_name_dns_aaaa_record_on_launch = false
+      + id                                             = (known after apply)
+      + ipv6_cidr_block_association_id                 = (known after apply)
+      + ipv6_native                                    = false
+      + map_public_ip_on_launch                        = false
+      + owner_id                                       = (known after apply)
+      + private_dns_hostname_type_on_launch            = (known after apply)
+      + tags                                           = {
+          + "Name" = "Private Subnet_for_db"
+        }
+      + tags_all                                       = {
+          + "Name" = "Private Subnet_for_db"
+        }
+      + vpc_id                                         = (known after apply)
+    }
+
+  # module.vpc.aws_subnet.private_subnets_for_db[1] will be created
+  + resource "aws_subnet" "private_subnets_for_db" {
+      + arn                                            = (known after apply)
+      + assign_ipv6_address_on_creation                = false
+      + availability_zone                              = "us-east-1b"
+      + availability_zone_id                           = (known after apply)
+      + cidr_block                                     = "10.0.112.0/20"
+      + enable_dns64                                   = false
+      + enable_resource_name_dns_a_record_on_launch    = false
+      + enable_resource_name_dns_aaaa_record_on_launch = false
+      + id                                             = (known after apply)
+      + ipv6_cidr_block_association_id                 = (known after apply)
+      + ipv6_native                                    = false
+      + map_public_ip_on_launch                        = false
+      + owner_id                                       = (known after apply)
+      + private_dns_hostname_type_on_launch            = (known after apply)
+      + tags                                           = {
+          + "Name" = "Private Subnet_for_db"
+        }
+      + tags_all                                       = {
+          + "Name" = "Private Subnet_for_db"
+        }
+      + vpc_id                                         = (known after apply)
+    }
+
+  # module.vpc.aws_subnet.private_subnets_for_db[2] will be created
+  + resource "aws_subnet" "private_subnets_for_db" {
+      + arn                                            = (known after apply)
+      + assign_ipv6_address_on_creation                = false
+      + availability_zone                              = "us-east-1c"
+      + availability_zone_id                           = (known after apply)
+      + cidr_block                                     = "10.0.128.0/20"
+      + enable_dns64                                   = false
+      + enable_resource_name_dns_a_record_on_launch    = false
+      + enable_resource_name_dns_aaaa_record_on_launch = false
+      + id                                             = (known after apply)
+      + ipv6_cidr_block_association_id                 = (known after apply)
+      + ipv6_native                                    = false
+      + map_public_ip_on_launch                        = false
+      + owner_id                                       = (known after apply)
+      + private_dns_hostname_type_on_launch            = (known after apply)
+      + tags                                           = {
+          + "Name" = "Private Subnet_for_db"
+        }
+      + tags_all                                       = {
+          + "Name" = "Private Subnet_for_db"
+        }
+      + vpc_id                                         = (known after apply)
+    }
+
   # module.vpc.aws_subnet.public_subnets[0] will be created
   + resource "aws_subnet" "public_subnets" {
       + arn                                            = (known after apply)
@@ -406,124 +535,147 @@ Terraform will perform the following actions:
       + tags_all                             = (known after apply)
     }
 
-Plan: 24 to add, 0 to change, 0 to destroy.
+Plan: 33 to add, 0 to change, 0 to destroy.
 
 Changes to Outputs:
-  + nat_gateway_id     = [
+  + nat_gateway_id            = [
       + (known after apply),
       + (known after apply),
       + (known after apply),
     ]
-  + private_subnet_ids = [
+  + private_subnet_for_db_ids = [
       + (known after apply),
       + (known after apply),
       + (known after apply),
     ]
-  + public_subnet_ids  = [
+  + private_subnet_ids        = [
       + (known after apply),
       + (known after apply),
       + (known after apply),
     ]
-  + vpc_id             = (known after apply)
-module.vpc.aws_vpc.vpc_assignment: Creating...
-module.vpc.aws_eip.nat[0]: Creating...
-module.vpc.aws_eip.nat[2]: Creating...
+  + public_subnet_ids         = [
+      + (known after apply),
+      + (known after apply),
+      + (known after apply),
+    ]
+  + vpc_id                    = (known after apply)
 module.vpc.aws_eip.nat[1]: Creating...
-module.vpc.aws_eip.nat[2]: Creation complete after 2s [id=eipalloc-0a85d0013ef765cd5]
-module.vpc.aws_eip.nat[0]: Creation complete after 2s [id=eipalloc-07bb16c1d0303c951]
-module.vpc.aws_eip.nat[1]: Creation complete after 2s [id=eipalloc-0c9e49e7a2c4fd1fb]
-module.vpc.aws_vpc.vpc_assignment: Creation complete after 4s [id=vpc-00f32b84645da4c41]
+module.vpc.aws_eip.nat[2]: Creating...
+module.vpc.aws_eip.nat[0]: Creating...
+module.vpc.aws_vpc.vpc_assignment: Creating...
+module.vpc.aws_eip.nat[2]: Creation complete after 2s [id=eipalloc-06c180ec2dd9388e0]
+module.vpc.aws_eip.nat[0]: Creation complete after 2s [id=eipalloc-08bf8f7795d8b1748]
+module.vpc.aws_eip.nat[1]: Creation complete after 2s [id=eipalloc-07250dbf71c7bff0e]
+module.vpc.aws_vpc.vpc_assignment: Creation complete after 4s [id=vpc-0e50bc6e08392da8c]
 module.vpc.aws_internet_gateway.internet_assignment: Creating...
-module.vpc.aws_subnet.private_subnets[1]: Creating...
-module.vpc.aws_subnet.private_subnets[2]: Creating...
-module.vpc.aws_subnet.public_subnets[2]: Creating...
-module.vpc.aws_subnet.private_subnets[0]: Creating...
+module.vpc.aws_route_table.private_rt_for_db[2]: Creating...
 module.vpc.aws_subnet.public_subnets[1]: Creating...
+module.vpc.aws_subnet.private_subnets_for_db[0]: Creating...
 module.vpc.aws_subnet.public_subnets[0]: Creating...
-module.vpc.aws_internet_gateway.internet_assignment: Creation complete after 1s [id=igw-08333217b3d830088]
-module.vpc.aws_subnet.private_subnets[0]: Creation complete after 1s [id=subnet-03e6fd6d97376e6d3]
+module.vpc.aws_subnet.public_subnets[2]: Creating...
+module.vpc.aws_subnet.private_subnets[2]: Creating...
+module.vpc.aws_subnet.private_subnets_for_db[2]: Creating...
+module.vpc.aws_subnet.private_subnets[0]: Creating...
+module.vpc.aws_route_table.private_rt_for_db[0]: Creating...
+module.vpc.aws_subnet.private_subnets_for_db[0]: Creation complete after 2s [id=subnet-0cae715fa65f45681]
+module.vpc.aws_subnet.private_subnets[1]: Creating...
+module.vpc.aws_internet_gateway.internet_assignment: Creation complete after 2s [id=igw-0f0e686b650c24ac6]
+module.vpc.aws_subnet.private_subnets_for_db[1]: Creating...
+module.vpc.aws_route_table.private_rt_for_db[2]: Creation complete after 2s [id=rtb-0788f7f19ec282169]
+module.vpc.aws_route_table.private_rt_for_db[1]: Creating...
+module.vpc.aws_subnet.private_subnets[0]: Creation complete after 2s [id=subnet-0a16896cd0d523b44]
 module.vpc.aws_route_table.public_rt: Creating...
-module.vpc.aws_subnet.private_subnets[2]: Creation complete after 2s [id=subnet-09b040ceea731fd9c]
-module.vpc.aws_subnet.private_subnets[1]: Creation complete after 2s [id=subnet-05f4a21249b317499]
-module.vpc.aws_route_table.public_rt: Creation complete after 3s [id=rtb-0bd35a384f4f845ed]
-module.vpc.aws_subnet.public_subnets[2]: Still creating... [10s elapsed]
+module.vpc.aws_subnet.private_subnets[2]: Creation complete after 2s [id=subnet-016166c62c715ee5e]
+module.vpc.aws_subnet.private_subnets_for_db[2]: Creation complete after 2s [id=subnet-0a396e1b6acbf2d9a]
+module.vpc.aws_route_table.private_rt_for_db[0]: Creation complete after 2s [id=rtb-0878d305707e919f8]
+module.vpc.aws_subnet.private_subnets[1]: Creation complete after 1s [id=subnet-0a98d84df4c83c667]
+module.vpc.aws_subnet.private_subnets_for_db[1]: Creation complete after 1s [id=subnet-07d8454f89d8ba74f]
+module.vpc.aws_route_table.private_rt_for_db[1]: Creation complete after 1s [id=rtb-0a268f596ea3fad19]
+module.vpc.aws_route_table_association.private_rt_assoc_for_db[0]: Creating...
+module.vpc.aws_route_table_association.private_rt_assoc_for_db[1]: Creating...
+module.vpc.aws_route_table_association.private_rt_assoc_for_db[2]: Creating...
+module.vpc.aws_route_table_association.private_rt_assoc_for_db[0]: Creation complete after 1s [id=rtbassoc-04d96ea86233f4d46]
+module.vpc.aws_route_table_association.private_rt_assoc_for_db[1]: Creation complete after 1s [id=rtbassoc-067e9393eb018d54b]
+module.vpc.aws_route_table_association.private_rt_assoc_for_db[2]: Creation complete after 1s [id=rtbassoc-031c7e2e44aba8db2]
+module.vpc.aws_route_table.public_rt: Creation complete after 2s [id=rtb-03368153a2627fd21]
 module.vpc.aws_subnet.public_subnets[1]: Still creating... [10s elapsed]
 module.vpc.aws_subnet.public_subnets[0]: Still creating... [10s elapsed]
-module.vpc.aws_subnet.public_subnets[1]: Creation complete after 12s [id=subnet-0ec2094c4048360b7]
-module.vpc.aws_subnet.public_subnets[2]: Creation complete after 12s [id=subnet-0c2c6b5b541302e22]
-module.vpc.aws_subnet.public_subnets[0]: Creation complete after 12s [id=subnet-0bd710b6f2001cd10]
+module.vpc.aws_subnet.public_subnets[2]: Still creating... [10s elapsed]
+module.vpc.aws_subnet.public_subnets[1]: Creation complete after 13s [id=subnet-0a3a8d5d3a46b1c20]
+module.vpc.aws_subnet.public_subnets[0]: Creation complete after 13s [id=subnet-0c340ed995875ed06]
+module.vpc.aws_subnet.public_subnets[2]: Creation complete after 13s [id=subnet-07050743748163901]
 module.vpc.aws_route_table_association.public_rt_assoc[0]: Creating...
-module.vpc.aws_route_table_association.public_rt_assoc[1]: Creating...
-module.vpc.aws_nat_gateway.nat_assignment[1]: Creating...
-module.vpc.aws_nat_gateway.nat_assignment[2]: Creating...
 module.vpc.aws_route_table_association.public_rt_assoc[2]: Creating...
+module.vpc.aws_route_table_association.public_rt_assoc[1]: Creating...
+module.vpc.aws_nat_gateway.nat_assignment[2]: Creating...
+module.vpc.aws_nat_gateway.nat_assignment[1]: Creating...
 module.vpc.aws_nat_gateway.nat_assignment[0]: Creating...
-module.vpc.aws_route_table_association.public_rt_assoc[0]: Creation complete after 2s [id=rtbassoc-07dabf32002de4666]
-module.vpc.aws_route_table_association.public_rt_assoc[2]: Creation complete after 2s [id=rtbassoc-0386449ee83662f48]
-module.vpc.aws_route_table_association.public_rt_assoc[1]: Creation complete after 2s [id=rtbassoc-09e309359486d7a4e]
-module.vpc.aws_nat_gateway.nat_assignment[2]: Still creating... [10s elapsed]
-module.vpc.aws_nat_gateway.nat_assignment[1]: Still creating... [10s elapsed]
+module.vpc.aws_route_table_association.public_rt_assoc[2]: Creation complete after 1s [id=rtbassoc-0e687e06ec24f4e22]
+module.vpc.aws_route_table_association.public_rt_assoc[0]: Creation complete after 1s [id=rtbassoc-0879491b9ae42892f]
+module.vpc.aws_route_table_association.public_rt_assoc[1]: Creation complete after 1s [id=rtbassoc-0d64bbc1938aa7d16]
 module.vpc.aws_nat_gateway.nat_assignment[0]: Still creating... [10s elapsed]
+module.vpc.aws_nat_gateway.nat_assignment[1]: Still creating... [10s elapsed]
+module.vpc.aws_nat_gateway.nat_assignment[2]: Still creating... [10s elapsed]
+module.vpc.aws_nat_gateway.nat_assignment[0]: Still creating... [20s elapsed]
 module.vpc.aws_nat_gateway.nat_assignment[2]: Still creating... [20s elapsed]
 module.vpc.aws_nat_gateway.nat_assignment[1]: Still creating... [20s elapsed]
-module.vpc.aws_nat_gateway.nat_assignment[0]: Still creating... [20s elapsed]
-module.vpc.aws_nat_gateway.nat_assignment[2]: Still creating... [30s elapsed]
 module.vpc.aws_nat_gateway.nat_assignment[1]: Still creating... [30s elapsed]
 module.vpc.aws_nat_gateway.nat_assignment[0]: Still creating... [30s elapsed]
-module.vpc.aws_nat_gateway.nat_assignment[1]: Still creating... [40s elapsed]
+module.vpc.aws_nat_gateway.nat_assignment[2]: Still creating... [30s elapsed]
 module.vpc.aws_nat_gateway.nat_assignment[2]: Still creating... [40s elapsed]
+module.vpc.aws_nat_gateway.nat_assignment[1]: Still creating... [40s elapsed]
 module.vpc.aws_nat_gateway.nat_assignment[0]: Still creating... [40s elapsed]
+module.vpc.aws_nat_gateway.nat_assignment[0]: Still creating... [50s elapsed]
 module.vpc.aws_nat_gateway.nat_assignment[2]: Still creating... [50s elapsed]
 module.vpc.aws_nat_gateway.nat_assignment[1]: Still creating... [50s elapsed]
-module.vpc.aws_nat_gateway.nat_assignment[0]: Still creating... [50s elapsed]
+module.vpc.aws_nat_gateway.nat_assignment[1]: Still creating... [1m0s elapsed]
 module.vpc.aws_nat_gateway.nat_assignment[2]: Still creating... [1m0s elapsed]
 module.vpc.aws_nat_gateway.nat_assignment[0]: Still creating... [1m0s elapsed]
-module.vpc.aws_nat_gateway.nat_assignment[1]: Still creating... [1m0s elapsed]
-module.vpc.aws_nat_gateway.nat_assignment[2]: Still creating... [1m10s elapsed]
 module.vpc.aws_nat_gateway.nat_assignment[0]: Still creating... [1m10s elapsed]
 module.vpc.aws_nat_gateway.nat_assignment[1]: Still creating... [1m10s elapsed]
+module.vpc.aws_nat_gateway.nat_assignment[2]: Still creating... [1m10s elapsed]
+module.vpc.aws_nat_gateway.nat_assignment[0]: Still creating... [1m20s elapsed]
 module.vpc.aws_nat_gateway.nat_assignment[2]: Still creating... [1m20s elapsed]
-module.vpc.aws_nat_gateway.nat_assignment[0]: Still creating... [1m21s elapsed]
-module.vpc.aws_nat_gateway.nat_assignment[1]: Still creating... [1m21s elapsed]
-module.vpc.aws_nat_gateway.nat_assignment[2]: Still creating... [1m31s elapsed]
-module.vpc.aws_nat_gateway.nat_assignment[1]: Still creating... [1m31s elapsed]
-module.vpc.aws_nat_gateway.nat_assignment[0]: Still creating... [1m31s elapsed]
-module.vpc.aws_nat_gateway.nat_assignment[1]: Creation complete after 1m39s [id=nat-0604d2be9320c81cf]
-module.vpc.aws_nat_gateway.nat_assignment[2]: Still creating... [1m41s elapsed]
-module.vpc.aws_nat_gateway.nat_assignment[0]: Still creating... [1m41s elapsed]
-module.vpc.aws_nat_gateway.nat_assignment[0]: Creation complete after 1m49s [id=nat-0c1caf8ba0d4f4635]
-module.vpc.aws_nat_gateway.nat_assignment[2]: Still creating... [1m51s elapsed]
-module.vpc.aws_nat_gateway.nat_assignment[2]: Creation complete after 2m0s [id=nat-039edd29adb5d6993]
+module.vpc.aws_nat_gateway.nat_assignment[1]: Still creating... [1m20s elapsed]
+module.vpc.aws_nat_gateway.nat_assignment[1]: Creation complete after 1m28s [id=nat-0de2dfa0a57b36314]
+module.vpc.aws_nat_gateway.nat_assignment[0]: Creation complete after 1m28s [id=nat-0c339cc9d08d18012]
+module.vpc.aws_nat_gateway.nat_assignment[2]: Still creating... [1m30s elapsed]
+module.vpc.aws_nat_gateway.nat_assignment[2]: Creation complete after 1m37s [id=nat-0418165d26cbc1591]
 module.vpc.aws_route_table.private_rt[2]: Creating...
-module.vpc.aws_route_table.private_rt[1]: Creating...
 module.vpc.aws_route_table.private_rt[0]: Creating...
-module.vpc.aws_route_table.private_rt[0]: Creation complete after 2s [id=rtb-0f8e054d101d847a1]
-module.vpc.aws_route_table.private_rt[2]: Creation complete after 2s [id=rtb-028f3541c58bf1a6b]
-module.vpc.aws_route_table.private_rt[1]: Creation complete after 2s [id=rtb-06e583342bffdd27b]
+module.vpc.aws_route_table.private_rt[1]: Creating...
+module.vpc.aws_route_table.private_rt[0]: Creation complete after 3s [id=rtb-07cceb1438366765a]
+module.vpc.aws_route_table.private_rt[1]: Creation complete after 3s [id=rtb-0ab3f0c2368912c36]
+module.vpc.aws_route_table.private_rt[2]: Creation complete after 3s [id=rtb-004f2ce2dd20c29f4]
 module.vpc.aws_route_table_association.private_rt_assoc[0]: Creating...
 module.vpc.aws_route_table_association.private_rt_assoc[1]: Creating...
 module.vpc.aws_route_table_association.private_rt_assoc[2]: Creating...
-module.vpc.aws_route_table_association.private_rt_assoc[1]: Creation complete after 1s [id=rtbassoc-03576f04636679f06]
-module.vpc.aws_route_table_association.private_rt_assoc[0]: Creation complete after 1s [id=rtbassoc-09e4dd64133376e9b]
-module.vpc.aws_route_table_association.private_rt_assoc[2]: Creation complete after 1s [id=rtbassoc-000db1bec44afe28c]
+module.vpc.aws_route_table_association.private_rt_assoc[2]: Creation complete after 1s [id=rtbassoc-045e3d299ced36abd]
+module.vpc.aws_route_table_association.private_rt_assoc[0]: Creation complete after 1s [id=rtbassoc-08dcb04a9af15d403]
+module.vpc.aws_route_table_association.private_rt_assoc[1]: Creation complete after 1s [id=rtbassoc-04c5c31fec3b86366]
 
-Apply complete! Resources: 24 added, 0 changed, 0 destroyed.
+Apply complete! Resources: 33 added, 0 changed, 0 destroyed.
 
 Outputs:
 
 nat_gateway_id = [
-  "nat-0c1caf8ba0d4f4635",
-  "nat-0604d2be9320c81cf",
-  "nat-039edd29adb5d6993",
+  "nat-0c339cc9d08d18012",
+  "nat-0de2dfa0a57b36314",
+  "nat-0418165d26cbc1591",
+]
+private_subnet_for_db_ids = [
+  "subnet-0cae715fa65f45681",
+  "subnet-07d8454f89d8ba74f",
+  "subnet-0a396e1b6acbf2d9a",
 ]
 private_subnet_ids = [
-  "subnet-03e6fd6d97376e6d3",
-  "subnet-05f4a21249b317499",
-  "subnet-09b040ceea731fd9c",
+  "subnet-0a16896cd0d523b44",
+  "subnet-0a98d84df4c83c667",
+  "subnet-016166c62c715ee5e",
 ]
 public_subnet_ids = [
-  "subnet-0bd710b6f2001cd10",
-  "subnet-0ec2094c4048360b7",
-  "subnet-0c2c6b5b541302e22",
+  "subnet-0c340ed995875ed06",
+  "subnet-0a3a8d5d3a46b1c20",
+  "subnet-07050743748163901",
 ]
-vpc_id = "vpc-00f32b84645da4c41"
+vpc_id = "vpc-0e50bc6e08392da8c"
