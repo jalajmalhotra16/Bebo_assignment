@@ -46,7 +46,17 @@ resource "aws_route_table_association" "public_rt_assoc" {
 
 }
 
-
+#creating subnets for database
+resource "aws_subnet" "private_subnets_for_db" {
+  count             = var.private_subnets
+  vpc_id            = aws_vpc.vpc_assignment.id
+  cidr_block        = cidrsubnet(var.vpc_cidr, 4, count.index + var.public_subnets + var.private_subnets)
+  availability_zone = element(var.azs, count.index)
+  tags = {
+    Name = "Private Subnet_for_db"
+  }
+}
+ 
 resource "aws_eip" "nat" {
   count  = var.public_subnets
   domain = "vpc"
@@ -68,10 +78,23 @@ resource "aws_route_table" "private_rt" {
   }
 }
 
+resource "aws_route_table" "private_rt_for_db" {
+  count  = var.private_subnets
+  vpc_id = aws_vpc.vpc_assignment.id
+}
+
+
 resource "aws_route_table_association" "private_rt_assoc" {
   count          = var.private_subnets
   subnet_id      = element(aws_subnet.private_subnets[*].id, count.index)
   route_table_id = element(aws_route_table.private_rt[*].id, count.index)
+}
+
+
+resource "aws_route_table_association" "private_rt_assoc_for_db" {
+  count          = var.private_subnets
+  subnet_id      = element(aws_subnet.private_subnets_for_db[*].id, count.index)
+  route_table_id = element(aws_route_table.private_rt_for_db[*].id, count.index)
 }
 
 resource "aws_ec2_transit_gateway" "transit_assignment" {
